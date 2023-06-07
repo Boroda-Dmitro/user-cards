@@ -28,7 +28,7 @@ export const UserItem = ({ user, onFollow }) => {
       <button
         type="button"
         onClick={handleFollow}
-        className={`${css.button} ${user.follow && css.button_follow}`}
+        className={`${css.button} ${user.follow ? css.button_follow : ""}`}
       >
         {user.follow ? "following" : "follow"}
       </button>
