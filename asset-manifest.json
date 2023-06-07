@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/user-cards/static/css/main.c5e26278.css",
-    "main.js": "/user-cards/static/js/main.005472d7.js",
-    "static/css/611.047b279a.chunk.css": "/user-cards/static/css/611.047b279a.chunk.css",
-    "static/js/611.36ace1fd.chunk.js": "/user-cards/static/js/611.36ace1fd.chunk.js",
-    "static/js/787.1e44e8cf.chunk.js": "/user-cards/static/js/787.1e44e8cf.chunk.js",
-    "static/js/384.76cc4fab.chunk.js": "/user-cards/static/js/384.76cc4fab.chunk.js",
+    "main.css": "/user-cards/static/css/main.c2b4f412.css",
+    "main.js": "/user-cards/static/js/main.fae41c7a.js",
+    "static/css/762.fadd5126.chunk.css": "/user-cards/static/css/762.fadd5126.chunk.css",
+    "static/js/762.24d44a7f.chunk.js": "/user-cards/static/js/762.24d44a7f.chunk.js",
+    "static/js/384.10f677a1.chunk.js": "/user-cards/static/js/384.10f677a1.chunk.js",
+    "static/media/image.png": "/user-cards/static/media/image.b3d9942b3f9d5dad1ff0.png",
+    "static/media/avatar.png": "/user-cards/static/media/avatar.9628b215ff8b0d11a1c7.png",
+    "static/media/Logo.svg": "/user-cards/static/media/Logo.eb74a9cfcc8c2946c8beb2961898c04b.svg",
     "index.html": "/user-cards/index.html",
-    "main.c5e26278.css.map": "/user-cards/static/css/main.c5e26278.css.map",
-    "main.005472d7.js.map": "/user-cards/static/js/main.005472d7.js.map",
-    "611.047b279a.chunk.css.map": "/user-cards/static/css/611.047b279a.chunk.css.map",
-    "611.36ace1fd.chunk.js.map": "/user-cards/static/js/611.36ace1fd.chunk.js.map",
-    "787.1e44e8cf.chunk.js.map": "/user-cards/static/js/787.1e44e8cf.chunk.js.map",
-    "384.76cc4fab.chunk.js.map": "/user-cards/static/js/384.76cc4fab.chunk.js.map"
+    "main.c2b4f412.css.map": "/user-cards/static/css/main.c2b4f412.css.map",
+    "main.fae41c7a.js.map": "/user-cards/static/js/main.fae41c7a.js.map",
+    "762.fadd5126.chunk.css.map": "/user-cards/static/css/762.fadd5126.chunk.css.map",
+    "762.24d44a7f.chunk.js.map": "/user-cards/static/js/762.24d44a7f.chunk.js.map",
+    "384.10f677a1.chunk.js.map": "/user-cards/static/js/384.10f677a1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5e26278.css",
-    "static/js/main.005472d7.js"
+    "static/css/main.c2b4f412.css",
+    "static/js/main.fae41c7a.js"
   ]
 }
