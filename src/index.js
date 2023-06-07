@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import reportWebVitals from './reportWebVitals';
 import App from './Components/App';
+import WebFont from 'webfontloader';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,5 +16,8 @@ root.render(
   </React.StrictMode>
 );
 
-
-reportWebVitals();
+WebFont.load({
+  google: {
+    families: ['Montserrat:400,500,600,700'],
+  },
+});

@@ -4,11 +4,7 @@
   justify-content: space-around;
   margin-bottom: 40px;
   padding: 16px;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.2637429971988795) 0%,
-    rgba(0, 0, 0, 0.24413515406162467) 50%
-  );
+  background-color: #766A92;
 }
 
 .nav_list {
@@ -26,8 +22,15 @@
   padding: 8px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
+  transition: color 250ms; 
 }
+
+.nav_link:hover, :focus {
+  color: #b800a8;
+  outline: none;
+}
+
 
 .navigation {
   width: 100px;

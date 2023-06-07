@@ -6,7 +6,10 @@ import { Loader } from "./Loader/Loader";
 
 const StyledLink = styled(NavLink)`
   &.active {
-    color: rgb(236, 83, 83);
+    color: rgb(141, 4, 130);
+  }
+  &.active:hover, :focus {
+    color: #b800a8;
   }
 `;
 

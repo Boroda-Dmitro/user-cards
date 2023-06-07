@@ -3,6 +3,7 @@ import { UserItem } from "../../Components/User/UserItem";
 import { fetchUsers, putUser } from "../../Services/fetchData";
 import { Loader } from "../../Components/Loader/Loader";
 import css from './Tweets.module.css'
+import { toast } from "react-toastify";
 
 export default function Tweets() {
   const [users, setUsers] = useState([]);
@@ -10,20 +11,28 @@ export default function Tweets() {
   const [currentPage, setCurrentPage] = useState(1);
   const [showLoadMore, setShowLoadMore] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
   const usersPerPage = 3;
 
   useEffect(() => {
     const fetchAllUsers = async () => {
       setIsLoading(true);
-      const allUsers = await fetchUsers();
-      setIsLoading(false);
-      setUsers(allUsers);
-      setVisibleUsers(allUsers.slice(0, usersPerPage));
-      setShowLoadMore(allUsers.length > usersPerPage);
+      try {
+        const allUsers = await fetchUsers();
+        setUsers(allUsers);
+        setVisibleUsers(allUsers.slice(0, usersPerPage));
+        setShowLoadMore(allUsers.length > usersPerPage);
+      } catch (error) {
+        toast.error("Something went wrong. Please try again later.");
+        setIsError(true);
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     fetchAllUsers();
   }, []);
+   
 
   const loadMoreUsers = () => {
     const nextPage = currentPage + 1;
@@ -67,8 +76,8 @@ export default function Tweets() {
       {isLoading ? (
         <Loader />
       ) : (
-        showLoadMore && (
-          <button type="button" onClick={loadMoreUsers}>
+        !isError && showLoadMore && (
+          <button type="button" onClick={loadMoreUsers} className={css.button}>
             Load More
           </button>
         )
