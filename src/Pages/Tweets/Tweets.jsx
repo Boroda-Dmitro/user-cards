@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
-import { UserItem } from "../../Components/User/UserItem";
-import { fetchUsers, putUser } from "../../Services/fetchData";
-import { Loader } from "../../Components/Loader/Loader";
-import css from './Tweets.module.css'
-import { toast } from "react-toastify";
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { UserItem } from '../../Components/User/UserItem';
+import { fetchUsers, putUser } from '../../Services/fetchData';
+import { Loader } from '../../Components/Loader/Loader';
+import css from './Tweets.module.css';
+import { toast } from 'react-toastify';
 
 export default function Tweets() {
+  const navigate = useNavigate();
+
   const [users, setUsers] = useState([]);
   const [visibleUsers, setVisibleUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,7 +26,7 @@ export default function Tweets() {
         setVisibleUsers(allUsers.slice(0, usersPerPage));
         setShowLoadMore(allUsers.length > usersPerPage);
       } catch (error) {
-        toast.error("Something went wrong. Please try again later.");
+        toast.error('Something went wrong. Please try again later.');
         setIsError(true);
       } finally {
         setIsLoading(false);
@@ -32,7 +35,6 @@ export default function Tweets() {
 
     fetchAllUsers();
   }, []);
-   
 
   const loadMoreUsers = () => {
     const nextPage = currentPage + 1;
@@ -60,8 +62,15 @@ export default function Tweets() {
     }
   };
 
+  const handleBack = () => {
+    navigate(-1); 
+  };
+
   return (
     <div>
+      <button type="button" onClick={handleBack} className={css.backButton}>
+        Back
+      </button>
       <ul className={css.list}>
         {visibleUsers.map((user) => (
           <UserItem
